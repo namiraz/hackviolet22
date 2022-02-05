@@ -2,6 +2,38 @@
 <!-->Html specific to the homepage goes in the content block-->
 {% block content %}
 
-<p>Woot</p>
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <!--Form field for entering ingredients-->
+    <div>
+      {{ form.ingredients.label }}
+      {% if form.ingredients.errors %}
+        {{ form.ingredients }}
+        <div>
+          {% for error in form.ingredients.errors %}
+            <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+      {% else %}
+        {{ form.ingredients }}
+      {% endif %}
+    </div>
+    <!--Form field for entering appliances-->
+    <div>
+      {{ form.appliances.label }}
+      {% if form.appliances.errors %}
+        {{ form.appliances }}
+        <div>
+          {% for error in form.appliances.errors %}
+            <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+      {% else %}
+        {{ form.appliances }}
+      {% endif %}
+    </div>
+    <!--Submit button-->
+    {{ form.submit }}
+</form>
 
 {% endblock content %}
