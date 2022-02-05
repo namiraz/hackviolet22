@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <!-- Required meta tags -->
+       <!-- Connects stylesheet to webpages -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,9 +14,25 @@
       <title>Recipe Finder</title>
     {% endif %}
   </head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Thai+Looped">
   <body>
     <header>
       <!--Navbar html starts here -->
+      <div class="container">
+
+      <img src="static/cooklogo.png" width="40" height="40" alt="logo" class="logo">
+
+      <nav>
+
+        <ul> 
+         <li><a href="#">Home</a></li>
+         <li><a href="#">User Manual</a></li>
+         <li><a href="#">Contact</a></li>
+        </ul>
+
+      </nav>
+
+    </div>
 
       <!--Navbar html ends here -->
     </header>
