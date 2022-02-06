@@ -9,9 +9,9 @@
 
     <!--Displays the words that show up on the top of the browser tab-->
     {% if title %}
-      <title>{{ title }}</title>
+      <title>In Every Byte - {{ title }}</title>
     {% else %}
-      <title>The Cookbook</title>
+      <title>In Every Byte</title>
     {% endif %}
   </head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Thai+Looped">
@@ -37,7 +37,7 @@
       <!--Navbar html ends here -->
     </header>
     <main>
-      
+
         {% block content %}{% endblock content %}
     </main>
   </body>
