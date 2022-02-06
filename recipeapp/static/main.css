@@ -100,3 +100,27 @@ border-radius: 25px;
   width: 750px;
   height: 300px;
 }
+
+/* User ingredient input CSS starts here */
+
+input[type="submit"]{
+  width: 50%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+	font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+
+.submit-field {
+	padding-top: 20px;
+}

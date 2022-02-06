@@ -5,7 +5,7 @@
 <form method="POST" action="">
     {{ form.hidden_tag() }}
     <!--Form field for entering ingredients-->
-    <div>
+    <div class="text-field">
       {{ form.ingredients.label }}
       {% if form.ingredients.errors %}
         {{ form.ingredients }}
@@ -19,7 +19,7 @@
       {% endif %}
     </div>
     <!--Form field for entering appliances-->
-    <div>
+    <div class="text-field">
       {{ form.appliances.label }}
       {% if form.appliances.errors %}
         {{ form.appliances }}
@@ -33,7 +33,9 @@
       {% endif %}
     </div>
     <!--Submit button-->
-    {{ form.submit }}
+    <div class="submit-field">
+      {{ form.submit }}
+    </div>
 </form>
 {% endblock content %}
 </div>
