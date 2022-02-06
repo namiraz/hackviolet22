@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
-<!-->Html specific to the homepage goes in the content block-->
+<!--Html specific to the homepage goes in the content block-->
 {% block content %}
-
+<div class="content">
 <form method="POST" action="">
     {{ form.hidden_tag() }}
     <!--Form field for entering ingredients-->
@@ -35,5 +35,5 @@
     <!--Submit button-->
     {{ form.submit }}
 </form>
-
 {% endblock content %}
+</div>
