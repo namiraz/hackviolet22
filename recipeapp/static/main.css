@@ -114,6 +114,39 @@ mark {
   background-color: lightgrey;
   color: black;
 }
+.highlight {
+    font-size: 18px;
+    line-height: 36px;
+}
+.highlight span {
+    padding: 1px;
+    border-radius: 5px;
+}
+.highlight span span {
+    margin: 0 -3px;
+}
+.highlight .start {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+.highlight .end {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+.highlight .grey{
+	background-color: lightgrey;
+	color: black;
+}
+.highlight .red {
+  background-color: rgba(255, 0, 0, 0.15);
+  border-color: rgba(255, 0, 0, 0.5);
+}
+.highlight .green {
+    background-color: rgba(0, 255, 0, 0.15);
+    border-color: rgba(0, 255, 0, 0.5);
+}
 
 
 
