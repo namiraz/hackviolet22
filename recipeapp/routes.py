@@ -4,7 +4,7 @@ from flask import render_template, redirect, session, url_for
 from recipeapp import app
 from recipeapp.forms import IngredientsListForm
 
-@app.route("/", methods=["GET", "POST"])
+
 @app.route("/home", methods=["GET", "POST"])
 def home():
     form = IngredientsListForm()
@@ -51,6 +51,7 @@ def results():
         recipes.append(info)
     return render_template("results.html", recipes=recipes)
 
+@app.route("/", methods=["GET", "POST"])
 @app.route("/manual", methods=["GET", "POST"])
 def manual():
     return render_template("manual.html")
