@@ -1,1 +1,1 @@
-web: gunicorn ineverybyte:app
+web: gunicorn recipeapp:app
