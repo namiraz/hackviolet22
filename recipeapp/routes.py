@@ -1,3 +1,4 @@
+import json
 import requests
 from flask import render_template, redirect, session, url_for
 from recipeapp import app
@@ -29,6 +30,17 @@ def home():
 @app.route("/results", methods=["GET", "POST"])
 def results():
     data = session["data"]
+    data=data.encode('utf-8')
+    data=json.loads(data.decode('utf-8'))
+    print (type(data))
+    for recipe in data["results"]:
+        print(recipe["name"])
+        for components in recipe["sections"]:
+            for ingredients in components["components"]:
+                print (ingredients["raw_text"])
+        for steps in recipe["instructions"]:
+            print(steps["display_text"])
+        print("--------------PP------------")
     return render_template("results.html", data=data)
 
 @app.route("/manual", methods=["GET", "POST"])
