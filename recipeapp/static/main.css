@@ -81,11 +81,22 @@ nav a:hover::before {
 
   border-radius: 25px;
   background: #FFFFFF;
-  position: absolute;
+  position: relative;
   left: 40%;
   top: 30%;
   padding: 40px;
   width: 750px;
   height: 300px;
 
+}
+
+.contact {
+border-radius: 25px;
+  background: #FFFFFF;
+  position: relative;
+  left: 40%;
+  top: 30%;
+  padding: 40px;
+  width: 750px;
+  height: 300px;
 }
