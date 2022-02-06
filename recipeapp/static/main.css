@@ -115,15 +115,15 @@ mark {
   color: black;
 }
 .highlight {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 36px;
 }
 .highlight span {
     padding: 1px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .highlight span span {
-    margin: 0 -3px;
+    margin: 0 -2px;
 }
 .highlight .start {
     border-top-right-radius: 0;
