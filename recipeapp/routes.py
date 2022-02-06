@@ -1,3 +1,4 @@
+import requests
 from flask import render_template, redirect, session, url_for
 from recipeapp import app
 from recipeapp.forms import IngredientsListForm
@@ -20,15 +21,15 @@ def home():
         }
 
         response = requests.request("GET", url, headers=headers, params=querystring)
-        j = response.text
+        data = response.text
+        session["data"] = data
         return redirect(url_for("results"))
     return render_template("home.html", form=form)
 
 @app.route("/results", methods=["GET", "POST"])
 def results():
-    ingredients = session["ingredients"]
-    appliances = session["appliances"]
-    return render_template("results.html", ingredients=ingredients, appliances=appliances)
+    data = session["data"]
+    return render_template("results.html", data=data)
 
 @app.route("/manual", methods=["GET", "POST"])
 def manual():
