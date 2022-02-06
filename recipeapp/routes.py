@@ -1,9 +1,11 @@
 import json
+import os
 import requests
 from flask import render_template, redirect, session, url_for
 from recipeapp import app
 from recipeapp.forms import IngredientsListForm
 
+tasty_api_key = os.getenv("TASTY_API_KEY")
 
 @app.route("/home", methods=["GET", "POST"])
 def home():
@@ -18,7 +20,7 @@ def home():
 
         headers = {
             'x-rapidapi-host': "tasty.p.rapidapi.com",
-            'x-rapidapi-key': "fe5e900e75msh990876c1b7db3bap12a124jsn651c3ff6276b"
+            'x-rapidapi-key': tasty_api_key
         }
 
         response = requests.request("GET", url, headers=headers, params=querystring)
