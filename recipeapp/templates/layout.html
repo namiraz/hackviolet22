@@ -11,7 +11,7 @@
     {% if title %}
       <title>{{ title }}</title>
     {% else %}
-      <title>Recipe Finder</title>
+      <title>The Cookbook</title>
     {% endif %}
   </head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Thai+Looped">
@@ -20,7 +20,7 @@
       <!--Navbar html starts here -->
       <div class="container">
 
-      <img src="static/cooklogo.png" width="40" height="40" alt="logo" class="logo">
+      <img src="static/logo.png" width="217.5" height="47" alt="logo" class="logo">
 
       <nav>
 
@@ -37,7 +37,9 @@
       <!--Navbar html ends here -->
     </header>
     <main>
+      <div class="content">
         {% block content %}{% endblock content %}
+      </div>
     </main>
   </body>
 </html>
