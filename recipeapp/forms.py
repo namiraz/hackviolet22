@@ -6,7 +6,7 @@ class IngredientsListForm(FlaskForm):
     ingredients = TextAreaField("Ingredients",
         validators=[DataRequired()]
     )
-    appliances = TextAreaField("# of Recipes",
+    num_of_recipes = TextAreaField("# of Recipes",
         validators=[DataRequired()]
     )
     submit = SubmitField("Find Recipes")

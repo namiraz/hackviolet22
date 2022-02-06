@@ -10,11 +10,11 @@ def home():
     form = IngredientsListForm()
     if form.validate_on_submit():
         session["ingredients"] = form.ingredients.data
-        session["appliances"] = form.appliances.data
+        session["recipenumber"] = form.num_of_recipes.data
         #API call below this point
         url = "https://tasty.p.rapidapi.com/recipes/list"
 
-        querystring = {"from":"0","size":form.appliances.data or "10","q":form.ingredients.data}
+        querystring = {"from":"0","size":form.num_of_recipes.data or "10","q":form.ingredients.data}
 
         headers = {
             'x-rapidapi-host': "tasty.p.rapidapi.com",

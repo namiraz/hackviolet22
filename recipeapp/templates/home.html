@@ -20,16 +20,16 @@
     </div>
     <!--Form field for entering appliances-->
     <div class="text-field">
-      {{ form.appliances.label }}
-      {% if form.appliances.errors %}
-        {{ form.appliances }}
+      {{ form.num_of_recipes.label }}
+      {% if form.num_of_recipes.errors %}
+        {{ form.num_of_recipes }}
         <div>
-          {% for error in form.appliances.errors %}
+          {% for error in form.num_of_recipes.errors %}
             <span>{{ error }}</span>
           {% endfor %}
         </div>
       {% else %}
-        {{ form.appliances }}
+        {{ form.num_of_recipes }}
       {% endif %}
     </div>
     <!--Submit button-->
