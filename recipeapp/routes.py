@@ -14,7 +14,7 @@ def home():
         #API call below this point
         url = "https://tasty.p.rapidapi.com/recipes/list"
 
-        querystring = {"from":"0","size":"5","q":form.ingredients.data}
+        querystring = {"from":"0","size":form.appliances.data or "10","q":form.ingredients.data}
 
         headers = {
             'x-rapidapi-host': "tasty.p.rapidapi.com",
