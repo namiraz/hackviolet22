@@ -115,7 +115,6 @@ mark {
   color: black;
 }
 .highlight {
-    font-size: 16px;
     line-height: 36px;
 }
 .highlight span {
@@ -136,7 +135,6 @@ mark {
     border-left: none;
 }
 .highlight .grey{
-	background-color: white;
 	color: black;
 }
 .highlight .red {
