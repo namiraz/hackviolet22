@@ -39,6 +39,7 @@ def results():
             info["name"] = recipe["name"]
             info["ingredients"] = []
             info["instructions"] = []
+            info["image"] = recipe["thumbnail_url"]
             for components in recipe["sections"]:
                 for ingredients in components["components"]:
                     info["ingredients"].append(ingredients["raw_text"])
