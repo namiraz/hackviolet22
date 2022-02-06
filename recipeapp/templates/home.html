@@ -5,31 +5,31 @@
 <form method="POST" action="">
     {{ form.hidden_tag() }}
     <!--Form field for entering ingredients-->
+    {{ form.ingredients.label }}
     <div class="text-field">
-      {{ form.ingredients.label }}
       {% if form.ingredients.errors %}
-        {{ form.ingredients }}
+        {{ form.ingredients(rows="2", cols="30") }}
         <div>
           {% for error in form.ingredients.errors %}
             <span>{{ error }}</span>
           {% endfor %}
         </div>
       {% else %}
-        {{ form.ingredients }}
+        {{ form.ingredients(rows="2", cols="30") }}
       {% endif %}
     </div>
     <!--Form field for entering appliances-->
+    {{ form.num_of_recipes.label }}
     <div class="text-field">
-      {{ form.num_of_recipes.label }}
       {% if form.num_of_recipes.errors %}
-        {{ form.num_of_recipes }}
+        {{ form.num_of_recipes(rows="2", cols="30") }}
         <div>
           {% for error in form.num_of_recipes.errors %}
             <span>{{ error }}</span>
           {% endfor %}
         </div>
       {% else %}
-        {{ form.num_of_recipes }}
+        {{ form.num_of_recipes(rows="2", cols="30") }}
       {% endif %}
     </div>
     <!--Submit button-->

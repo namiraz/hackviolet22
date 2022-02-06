@@ -196,3 +196,7 @@ input[type="submit"]:hover{
   padding: 30px;
 
 }
+
+.text-field {
+	padding: 5px;
+}
