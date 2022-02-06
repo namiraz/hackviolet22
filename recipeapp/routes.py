@@ -30,18 +30,25 @@ def home():
 @app.route("/results", methods=["GET", "POST"])
 def results():
     data = session["data"]
-    data=data.encode('utf-8')
-    data=json.loads(data.decode('utf-8'))
-    print (type(data))
+    data = data.encode('utf-8')
+    data = json.loads(data.decode('utf-8'))
+    recipes = []
     for recipe in data["results"]:
-        print(recipe["name"])
-        for components in recipe["sections"]:
-            for ingredients in components["components"]:
-                print (ingredients["raw_text"])
-        for steps in recipe["instructions"]:
-            print(steps["display_text"])
-        print("--------------PP------------")
-    return render_template("results.html", data=data)
+        try:
+            info = {}
+            info["name"] = recipe["name"]
+            info["ingredients"] = []
+            info["instructions"] = []
+            for components in recipe["sections"]:
+                for ingredients in components["components"]:
+                    info["ingredients"].append(ingredients["raw_text"])
+            for steps in recipe["instructions"]:
+                info["instructions"].append(steps["display_text"])
+            #print("--------------PP------------")
+        except KeyError:
+            continue
+        recipes.append(info)
+    return render_template("results.html", recipes=recipes)
 
 @app.route("/manual", methods=["GET", "POST"])
 def manual():
